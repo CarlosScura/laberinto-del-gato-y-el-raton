@@ -1,26 +1,33 @@
-# importamos las librerias necesarias
-import random
+'''
+import funciones
+import minimax
 
-# creamos las variables que necesitamos inicialmente.
-laberinto = []
-tamano = 5
+def main():
+    inicializar tablero 4x4
+    colocar ratón en posición inicial
+    colocar gato en posición inicial
+    turnos = 0
 
-pos_cat = (0,0) # esquina superior izuqierda
-pos_rat = (0,4) # esquina superior derecha
+    mientras turnos < 6 y no terminal(state):
+        imprimir tablero con posiciones
+        pedir al usuario movimiento del ratón (arriba/abajo/izq/der)
+        validar movimiento y actualizar estado
 
+        # turno del gato con minimax
+        valor, mejor_movimiento = minimax.minimax(state, depth=2, maximizing_player=False)
+        aplicar movimiento del gato
+
+        turnos += 1
+
+    imprimir resultado (quién ganó o si terminó por turnos)
+
+'''
+import funciones as f
+import minimax
 
 
 # generamos el laberinto con el tamaño de la variable tamano.
+f.crear_laberinto()
 
-for i in range(tamano):
-    fila=[]
-    for j in range(tamano):
-        fila.append(' ')
-        laberinto.append(fila)
+f.mostrar_tablero()
 
-def mostrar_lab():
-    global laberinto
-    for i in range(tamano):
-        print(laberinto[i])
-
-mostrar_lab()
