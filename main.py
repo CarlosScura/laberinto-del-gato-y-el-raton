@@ -5,6 +5,11 @@ import random
 laberinto = []
 tamano = 5
 
+pos_cat = (0,0) # esquina superior izuqierda
+pos_rat = (0,4) # esquina superior derecha
+
+
+
 # generamos el laberinto con el tamaño de la variable tamano.
 
 for i in range(tamano):
