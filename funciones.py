@@ -1,27 +1,3 @@
-'''
-Pseudocodigo de las funciones.
-
-# def imprimir_tablero(state):
-#     crear matriz 4x4 con "."
-#     colocar "M" en posición del ratón
-#     colocar "C" en posición del gato
-#     mostrar en consola
-
-# def movimientos_validos(state, player):
-#     devolver lista de posiciones dentro del tablero (no salir de 4x4)
-
-# def aplicar_movimiento(state, move, player):
-#     devolver nuevo estado con jugador movido
-
-# def es_terminal(state):
-#     True si gato == ratón (captura)
-#     False en otro caso
-
-# def evaluar(state):
-#     devolver distancia Manhattan entre gato y ratón
-#     (ratón quiere maximizar, gato quiere minimizar)
-
-'''
 # definimos las posiciones del gato y el raton. lo hacemos asi para que sea escalable mas adelante.
 
 pos_gato = (0,0) # esquina superior izquierda
@@ -81,7 +57,7 @@ def fin_juego(tablero, turnos):
         return True
     else:   return False
 
-# creamos la funcion de distancia Manhattan para evaluar el estado del juego.
+# creamos la funcion de distancia Manhattan para evaluar la heuristica.
 
 def dist_manh(tablero):
     x_gato, y_gato = tablero["gato"]

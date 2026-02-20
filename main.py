@@ -1,29 +1,3 @@
-'''
-Pseudocogigo del main.
-
-import funciones
-import minimax
-
-def main():
-    inicializar tablero 4x4
-    colocar ratón en posición inicial
-    colocar gato en posición inicial
-    turnos = 0
-
-    mientras turnos < 6 y no terminal(state):
-        imprimir tablero con posiciones
-        pedir al usuario movimiento del ratón (arriba/abajo/izq/der)
-        validar movimiento y actualizar estado
-
-        # turno del gato con minimax
-        valor, mejor_movimiento = minimax.minimax(state, depth=2, maximizing_player=False)
-        aplicar movimiento del gato
-
-        turnos += 1
-
-    imprimir resultado (quién ganó o si terminó por turnos)
-
-'''
 import funciones as f
 import minimax as mx
 
@@ -69,7 +43,7 @@ def main():
         valor, mejor_movimiento = mx.minimax(f.tablero, profundidad=2, maximizando=False)
 
         # aplicar movimiento del gato (esto se hará dentro de la función minimax, pero lo dejamos aquí para mostrar la idea)
-        
+
         f.aplicar_movimiento(f.tablero, mejor_movimiento, "gato")
         turnos -= 1
     
