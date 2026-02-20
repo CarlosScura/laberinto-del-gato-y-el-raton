@@ -78,15 +78,12 @@ def aplicar_movimiento(tablero, movimiento, jugador):
 
 def fin_juego(tablero, turnos):
     if tablero["gato"] == tablero["raton"]:
-        return "Ganó el gato"
-    elif turnos == 0:
-        return "Ganó el ratón"
-    else:
-        return False
+        return True
+    else:   return False
 
 # creamos la funcion de distancia Manhattan para evaluar el estado del juego.
 
-def dist_mht(tablero):
+def dist_manh(tablero):
     x_gato, y_gato = tablero["gato"]
     x_raton, y_raton = tablero["raton"]
 
