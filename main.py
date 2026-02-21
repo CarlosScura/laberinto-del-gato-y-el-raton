@@ -8,7 +8,7 @@ def main():
     print(f"Ahora vamos a jugar un juego, hay un gato que tiene hambre y un raton que quiere vivir,\ntu mision es escapar del gato y sobrevivir por {turnos} turnos")
     print("Ratón! Ratoncito por favor SOBREVIVE AL GATITO!!")
     print("Para mover al raton debes usar w: arriba\ns: abajo\na: izquierda\nd: derecha")
-    while turnos > 0 and not f.fin_juego(f.tablero, turnos):
+    while turnos > 0 and not f.fin_juego(f.tablero):
         f.mostrar_tablero()
         mov_val = f.movimientos_validos(f.tablero,"raton")
         print(f'Tus posibles moviminetos son: {mov_val}')

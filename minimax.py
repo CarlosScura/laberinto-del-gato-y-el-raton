@@ -7,7 +7,7 @@ def minimax(tablero, profundidad, maximizando):
     # Comprobamos si se llegó a la profundidad maxima o si el juego terminó.
     # Y evaluamos el estado del juego usando la distancia Manhattan.
 
-    if profundidad == 0 or f.fin_juego(tablero, 0):
+    if profundidad == 0 or f.fin_juego(tablero):
         return f.dist_manh(tablero), None 
 
     # simulamos el turno del ratón.

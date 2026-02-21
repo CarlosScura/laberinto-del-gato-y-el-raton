@@ -22,7 +22,7 @@ def mostrar_tablero():
     x_raton, y_raton = tablero['raton']
     filas, columnas = tablero["tamaño"]
     
-    tablero["matriz"] = [["." for j in range(columnas)] for i in range(filas)]
+    tablero["matriz"] = [["." for j in range(columnas)] for i in range(filas)] # Limpiamos la matriz antes de actualizar las posiciones.
     tablero["matriz"][x_gato][y_gato] = "G"
     tablero["matriz"][x_raton][y_raton] = "R"
 
@@ -52,7 +52,7 @@ def aplicar_movimiento(tablero, movimiento, jugador):
 
 # creamos una funcion para controlar si el juego terminó o no.
 
-def fin_juego(tablero, turnos):
+def fin_juego(tablero):
     if tablero["gato"] == tablero["raton"]:
         return True
     else:   return False
